@@ -16,6 +16,9 @@ module.exports = {
         },
       },
     },
+    fontFamily: {
+      raleway: ["Raleway"],
+    },
   },
 
   plugins: [],

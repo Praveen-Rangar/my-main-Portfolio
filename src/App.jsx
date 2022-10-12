@@ -1,10 +1,14 @@
 import React from "react";
-import Announce from "./Components/Announce";
+import Navbar from "./components/Navbar";
+import Home from "./components/Home";
+import About from "./About";
 
 function App() {
   return (
     <div>
-      <Announce />
+      <Navbar />
+      <Home />
+      <About />
     </div>
   );
 }
