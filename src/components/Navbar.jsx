@@ -1,21 +1,18 @@
 import React from "react";
 import logo from "../assets/logo1.png";
-import {
-  FaBars,
-  FaTimes,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaMailBulk,
-} from "react-icons/fa";
+import { FaBars, FaTimes, FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import { Link } from "react-scroll";
 
 import { useState } from "react";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
-  const handleMenu = () => setNav(!nav);
+  function handleMenu() {
+    setNav(!nav);
+    return console.log("kdjfdkjhjkfhvjkfhvjkf");
+  }
 
   return (
     <div className="  fixed w-full h-[80px] flex items-center justify-between px-4 bg-[#0a192f] text-gray-300">
@@ -26,17 +23,37 @@ const Navbar = () => {
       {/* menu */}
 
       <ul className="hidden md:flex ">
-        <li>Home</li>
-        <li>About</li>
-        <li>Skill</li>
-        <li>Work</li>
-        <li>Contact</li>
+        <li>
+          <Link to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li>
+          <Link to="skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li>
+          <Link to="work" smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li>
+          <Link to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* hamburger */}
 
-      <div onClick={handleMenu} className="z-10 md:hidden">
-        {!nav ? <FaBars /> : <FaTimes />}
+      <div onClick={handleMenu} className="z-10 cursor-pointer md:hidden">
+        {!nav ? <FaBars className="text-xl" /> : <FaTimes className="text-xl" />}
       </div>
 
       {/* mobile menu */}
@@ -47,15 +64,37 @@ const Navbar = () => {
             : "absolute top-0 left-0 flex flex-col items-center justify-center w-full h-screen bg-[#0a192f]"
         }
       >
-        <li className="py-4 text-4xl">Home</li>
-        <li className="py-4 text-4xl">About</li>
-        <li className="py-4 text-4xl">Skill</li>
-        <li className="py-4 text-4xl">Work</li>
-        <li className="py-4 text-4xl">Contact</li>
+        <li className="py-4 text-4xl">
+          <Link onClick={handleMenu} to="home" smooth={true} duration={500}>
+            Home
+          </Link>
+        </li>
+        <li className="py-4 text-4xl">
+          <Link onClick={handleMenu} to="about" smooth={true} duration={500}>
+            About
+          </Link>
+        </li>
+        <li className="py-4 text-4xl">
+          {" "}
+          <Link onClick={handleMenu} to="skills" smooth={true} duration={500}>
+            Skills
+          </Link>
+        </li>
+        <li className="py-4 text-4xl">
+          <Link onClick={handleMenu} to="work" smooth={true} duration={500}>
+            Work
+          </Link>
+        </li>
+        <li className="py-4 text-4xl">
+          {" "}
+          <Link onClick={handleMenu} to="contact" smooth={true} duration={500}>
+            Contact
+          </Link>
+        </li>
       </ul>
 
       {/* social icons */}
-      <div className="hidden md:flex flex-col fixed left-0 top-[35%]">
+      <div className="hidden lg:flex flex-col fixed left-0 top-[35%]">
         <ul>
           <li className="w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-500">
             <a
@@ -76,7 +115,7 @@ const Navbar = () => {
           </li>
 
           <li
-            className="w-[160px] h-[60px] flex justify-between items-center 
+            className="w-[160px] h-[60px] flex justify-between items-center
           ] ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]"
           >
             <a
