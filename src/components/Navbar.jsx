@@ -25,27 +25,36 @@ const Navbar = () => {
       <ul className="hidden md:flex ">
         <li>
           <Link to="home" smooth={true} duration={500}>
-            Home
+            <span class="link link-underline link-underline-black ">Home</span>
           </Link>
         </li>
         <li>
           <Link to="about" smooth={true} duration={500}>
-            About
+            <span class="link link-underline link-underline-black ">
+              {" "}
+              About
+            </span>
           </Link>
         </li>
         <li>
           <Link to="skills" smooth={true} duration={500}>
-            Skills
+            <span class="link link-underline link-underline-black ">
+              {" "}
+              Skills
+            </span>
           </Link>
         </li>
         <li>
           <Link to="work" smooth={true} duration={500}>
-            Work
+            <span class="link link-underline link-underline-black "> Work</span>
           </Link>
         </li>
         <li>
           <Link to="contact" smooth={true} duration={500}>
-            Contact
+            <span class="link link-underline link-underline-black ">
+              {" "}
+              Contact
+            </span>
           </Link>
         </li>
       </ul>
@@ -53,7 +62,11 @@ const Navbar = () => {
       {/* hamburger */}
 
       <div onClick={handleMenu} className="z-10 cursor-pointer md:hidden">
-        {!nav ? <FaBars className="text-xl" /> : <FaTimes className="text-xl" />}
+        {!nav ? (
+          <FaBars className="text-xl" />
+        ) : (
+          <FaTimes className="text-xl" />
+        )}
       </div>
 
       {/* mobile menu */}
