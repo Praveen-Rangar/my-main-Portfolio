@@ -1,5 +1,5 @@
 import React from "react";
-import workimg from "../assets/workimg.jpeg";
+
 import realestate from "../assets/realestate.jpg";
 
 const Work = () => {
@@ -17,7 +17,7 @@ const Work = () => {
         <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {/* Gird Item */}
           <div
-            style={{ backgroundImage: `url(${workimg})` }}
+            style={{ backgroundImage: `url(${realestate})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div "
           >
@@ -92,7 +92,7 @@ const Work = () => {
           </div>
 
           <div
-            style={{ backgroundImage: `url(${workimg})` }}
+            style={{ backgroundImage: `url(${realestate})` }}
             className="shadow-lg shadow-[#040c16] group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div "
           >
@@ -117,7 +117,9 @@ const Work = () => {
           </div>
 
           <div
-            style={{ backgroundImage: `url(${workimg})` }}
+            style={{
+              backgroundImage: `url(${"https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw2fHx8ZW58MHx8fHw%3D&auto=format&fit=crop&w=600&q=60"})`,
+            }}
             className="shadow-lg shadow-[#040c16] group container rounded-md 
               flex justify-center text-center items-center mx-auto content-div "
           >
